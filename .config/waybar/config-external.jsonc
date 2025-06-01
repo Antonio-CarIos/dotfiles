@@ -1,0 +1,121 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "margin-top": 8,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 0,
+    "spacing": 8,
+    "output": "HDMI-A-1",
+    
+    "modules-left": [
+        "custom/arch",
+        "clock",
+        "custom/media"
+    ],
+    
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery"
+    ],
+    
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": false
+    },
+    
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "all-outputs": true,
+        "sort-by-number": true,
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "show-special": false,
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+    
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": " ",
+            "Paused": " ",
+            "Stopped": "󰙦 "
+        },
+        "max-length": 40,
+        "exec": "playerctl metadata --format '{\"text\": \"{{title}}\", \"tooltip\": \"{{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' 2>/dev/null",
+        "interval": 1,
+        "on-click": "playerctl play-pause"
+    },
+    
+    "clock": {
+        "format": "󰥔  {:%I:%M %p}",
+        "format-alt": "󰃭 {:%a, %b %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": "mode"
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 40,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "interval" : 1
+    },
+    
+    "network": {
+        "format-wifi": "󰖩  {essid}",
+        "format-ethernet": "󰛳 Ethernet",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "󰖪 Disconnected",
+    },
+    
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "{icon}",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "smooth-scrolling-threshold": 1,
+        "interval": 1
+    },
+    
+    "tray": {
+        "icon-size": 18,
+        "spacing": 12
+    }
+
+    
+}

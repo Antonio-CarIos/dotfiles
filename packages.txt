@@ -1,0 +1,34 @@
+sudo pacman -Syu
+
+sudo pacman -S git base-devel
+
+sudo pacman -S hyprland hyprutils hyprland-qtutils hyprpicker hypridle waybar kitty rofi swww swaync xdg-desktop-portal-hyprland python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl bluez celluloid loupe gedit gnome-calculator gnome-theme-murrine gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers
+
+yay -S python-pywalfox spicetify-cli spicetify-themes-git graphite-gtk-theme-nord-rimless-normal-git
+
+//Instalation ZordzyIcon
+mkdir $HOME/.config/.icons
+git clone https://github.com/alvatip/Nordzy-icon
+cd Nordzy-icon/
+sudo ./install.sh -d $HOME/.config/.icons -c dark
+rm -rf Nordzy-icon/
+
+//Instalation plugins Zsh, Oh my Zsh and Powerlevel10k
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+//Open ~/.zshrc, find the line that sets ZSH_THEME, and change its value to "powerlevel10k/powerlevel10k".
+
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+
+//Instalation Spicetify-theme  
+git clone --depth=1 https://github.com/spicetify/spicetify-themes.git 
+cd spicetify-themes
+cp -r * ~/.config/spicetify/Themes
+spicetify config current_theme text
+spicetify apply
+spicetify config color_scheme Nord
+  
+
+

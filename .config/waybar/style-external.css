@@ -1,0 +1,151 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "SF Pro Display", "Mononki Nerd Font Propo", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #0F2237;
+}
+
+/* Left modules */
+#custom-arch {
+    background-color: #ccdccf;
+    font-size: 24px;
+    padding: 2px 15px 2px 12px;
+    margin: 1px 4px 2px 0;
+    border-radius: 12px;
+    color: #2c8694;
+    border: 1px solid #0f0f0f;
+    box-shadow: 3px 2px 3px 0px rgba(15, 15, 15, 0.762);
+    /*box-shadow: 0 2px 3px rgba(15, 34, 55, 0.12);*/
+}
+
+#clock {
+    background-color: #ccdccf;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 6px 14px 6px 14px;
+    margin: 1px 4px 2px;
+    border-radius: 10px;
+    color: #2c8694;
+    border: 1px solid #0f0f0f;
+    box-shadow: 3px 2px 3px 0px rgba(15, 15, 15, 0.762);
+}
+
+#custom-media {
+    background-color: #ccdccf;
+    color: #0F2237;
+    min-width: 100px;
+    padding: 2px 10px 2px 10px;
+    margin: 1px 4px 2px 3px;
+    border-radius: 10px;
+    font-size: 17px;
+    border: 1px solid #0f0f0f;
+    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
+}
+
+#custom-media.Playing {
+    color: #2c8694;
+}
+
+#custom-media.Paused {
+    color: #8e9a90;
+}
+
+/* Center workspaces */
+#workspaces {
+    background-color: #ccdccf;
+    border-radius: 10px;
+    margin: 1px 4px 2px;
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #0f0f0f;
+    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
+}
+
+#workspaces button {
+    padding: 2px 6px;
+    color: #2c8694;
+    border-radius: 6px;
+    margin: 1px;
+    font-size: 17px;
+    min-width: 20px;
+    background: transparent;
+}
+
+#workspaces button:hover {
+    background: #91B19D;
+    color: #0F2237;
+}
+
+#workspaces button.active {
+    color: #2c8694;
+}
+
+#workspaces button.urgent {
+    background-color: #3B8893;
+    color: #ccdccf;
+}
+
+/* Right modules */
+#pulseaudio {
+    background-color: #ccdccf;
+    padding: 6px 12px 6px 12px;
+    margin: 1px 4px 2px;
+    border-radius: 10px;
+    color: #2c8694;
+    font-size: 17px;
+    border: 1px solid #0f0f0f;
+    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
+}
+
+#network {
+    background-color: #ccdccf;
+    padding: 6px 12px 6px 12px;
+    margin: 1px 4px 2px;
+    border-radius: 10px;
+    color: #2c8694;
+    font-size: 17px;
+    border: 1px solid #0f0f0f;
+    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
+}
+
+#battery {
+    background-color: #ccdccf;
+    padding: 6px 10px 6px 10px;
+    margin: 1px 4px 2px 4px;
+    border-radius: 10px;
+    color: #2c8694;
+    font-size: 17px;
+    border: 1px solid #0f0f0f;
+    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
+}
+
+/* Battery states */
+#battery.warning {
+    color: #679E9C;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #3B8893;
+    color: #ccdccf;
+}
+
+#battery.charging {
+    color: #2c8694;
+}
+
+/* Tooltip styling */
+tooltip {
+    background: #ccdccf;
+    border: 1px solid #91B19D;
+    border-radius: 6px;
+}
+
+tooltip label {
+    color: #0F2237;
+}

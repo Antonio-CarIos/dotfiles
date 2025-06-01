@@ -1,0 +1,192 @@
+/*****----- Configuration -----*****/
+configuration {
+    modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:                "󰣇";
+    display-run:                 " ";
+    display-filebrowser:         " ";
+    display-window:              " ";
+    drun-display-format:         "{name}";
+    window-format:               "{w}{t}";
+    font:                        "JetBrainsMono Nerd Font 10";
+    icon-theme:                  "Rose-Pine";
+}
+
+/*****----- Main Window -----*****/
+window {
+    height:                      460px;
+    width:                       890px;
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    enabled:                     true; 
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                #B1739C;
+    cursor:                      "default";
+    background-color:            #0F2237;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     12px;
+    background-color:            transparent;
+    orientation:                 horizontal;
+    children:                    [ "imagebox", "listbox" ];
+}
+
+imagebox {
+    padding:                     20px;
+    background-color:            transparent;
+    background-image:            url("~/Downloads/wallpaper-rofi.png", height);
+    orientation:                 vertical;
+    children:                    [ "inputbar", "dummy", "mode-switcher" ];
+}
+
+listbox {
+    spacing:                     5px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               15px;
+    background-color:            #0F2237;
+    text-color:                  #ccdccf;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         " ";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher {
+    enabled:                     true;
+    spacing:                     20px;
+    background-color:            transparent;
+    text-color:                  #ccdccf;
+}
+button {
+   padding:                     17px;
+    border-radius:               30px;
+    background-color:            #121518;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            #3B8893;
+    text-color:                  #ccdccf;
+    padding:                     15px;
+    border-radius:               30px;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       11;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+     spacing:                     5px;
+    background-color:            transparent;
+    text-color:                  #cbe6f0;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     8px;
+    border-radius:               15px;
+    background-color:            transparent;
+    text-color:                  #cbe6f0;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element normal.urgent {
+    background-color:            #5D7083;
+    text-color:                  #cbe6f0;
+}
+element normal.active {
+    background-color:            #5D7083;
+    text-color:                  #cbe6f0;
+}
+element selected.normal {
+    background-color:            #3B8893;
+    text-color:                  #cbe6f0;
+}
+element selected.urgent {
+    background-color:            #5D7083;
+    text-color:                  #cbe6f0;
+}
+element selected.active {
+    background-color:            #5D7083;
+    text-color:                  #cbe6f0;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            #5D7083;
+    text-color:                  #cbe6f0;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               20px;
+    background-color:            #121518;
+    text-color:                  #cbe6f0;
+}
