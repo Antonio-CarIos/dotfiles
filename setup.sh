@@ -10,8 +10,6 @@ function run_cmd() {
     echo -e "\033[1;32m[OK]\033[0m"
 }
 
-USER_NAME=$(whoami)
-
 # Atualizar sistema
 run_cmd "sudo pacman -Syu --noconfirm"
 
@@ -19,7 +17,7 @@ run_cmd "sudo pacman -Syu --noconfirm"
 run_cmd "sudo pacman -S --noconfirm git base-devel"
 
 # Instalar pacotes principais via pacman
-run_cmd "sudo pacman -S --noconfirm hyprland hyprutils hyprland-qtutils hyprpicker hypridle waybar kitty sddm rofi swww swaync wl-clipboard xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl bluez blueman bluedevil celluloid loupe gedit gnome-calculator gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland noto-fonts noto-fonts-extra noto-fonts-emoji ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers"
+run_cmd "sudo pacman -S hyprland hyprutils hyprland-qtutils hyprpicker hypridle waybar kitty sddm rofi swww swaync wl-clipboard xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl bluez blueman bluedevil celluloid loupe gedit gnome-calculator gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland noto-fonts noto-fonts-extra noto-fonts-emoji ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers"
 
 # Instalar yay
 if ! command -v yay &> /dev/null; then
@@ -30,7 +28,9 @@ if ! command -v yay &> /dev/null; then
 fi
 
 # Instalar pacotes via yay
-run_cmd "yay -S --noconfirm python-pywalfox spicetify-cli spicetify-themes-git"
+run_cmd "yay -S python-pywalfox spicetify-cli spicetify-themes-git"
+
+
 
 # Instalar Nordzy Icon Theme
 mkdir -p "$HOME/.config/.icons"
@@ -44,7 +44,7 @@ mkdir -p "$HOME/.config/.themes"
 run_cmd "git clone https://github.com/vinceliuice/Graphite-gtk-theme.git"
 cd Graphite-gtk-theme
 run_cmd "chmod +x ./install.sh"
-run_cmd "sudo ./install.sh -d ~/.config/.themes -t blue -c dark --tweaks 1 3 4 5"
+run_cmd "sudo ./install.sh -d ~/.config/.themes -t blue -c dark --tweaks nord normal rimless"
 cd .. && rm -rf Graphite-gtk-theme/
 
 # Instalar oh-my-zsh, powerlevel10k e plugins
@@ -59,14 +59,18 @@ run_cmd "git clone https://github.com/zdharma-continuum/fast-syntax-highlighting
 run_cmd "chsh -s $(which zsh)"
 run_cmd "chsh -s /bin/zsh"
 
-# Instalar temas do Spicetify
-run_cmd "git clone --depth=1 https://github.com/spicetify/spicetify-themes.git"
-cd spicetify-themes
-cp -r * ~/.config/spicetify/Themes
-spicetify config current_theme text
-spicetify config color_scheme Nord
-spicetify apply
-cd .. && rm -rf spicetify-themes
+# Instalar Rofi launcher com temas personalizados
+run_cmd "git clone --depth=1 https://github.com/adi1090x/rofi.git"
+cd rofi/
+run_cmd "chmod +x setup.sh"
+run_cmd "./setup.sh"
+cd .. && rm -rf rofi/
+
+# Copiar arquivos de configuração do repositório para ~/.config
+run_cmd "cp -r .config/* ~/.config/"
+
+# Copiar arquivos ocultos do repositório para home
+run_cmd "cp .zshrc .p10k.zsh ~/"
 
 # Aplicar imagem e tema com pywal e pywalfox
 run_cmd "wal -i ~/.config/wallpaper/wallpaper.png"
@@ -75,20 +79,25 @@ run_cmd "pywalfox update"
 # Ajustar imagem do Rofi launcher
 sed -i 's|url(.*)|url("~/.config/wallpaper/wallpaper-rofi.png", height);|' ~/.config/rofi/launchers/type-6/style-9.rasi
 
-# Executar setup do Rofi
-chmod +x ~/.config/rofi/setup.sh
-~/.config/rofi/setup.sh
-
-# Copiar arquivos de configuração do repositório para ~/.config
-run_cmd "cp -r .config/* ~/.config/"
-
-# Copiar arquivos ocultos do repositório para home
-run_cmd "cp .zshrc .p10k.zsh ~/"
-
 # Aplicar papel de parede
 run_cmd "swww init"
 sleep 1
 run_cmd "swww img ~/.config/wallpaper/wallpaper.png"
+
+
+# Instalar e configurar Spicetify
+run_cmd "spicetify"
+run_cmd "spicetify backup apply enable-devtools"
+run_cmd "spicetify update"
+run_cmd "git clone --depth=1 https://github.com/spicetify/spicetify-themes.git"
+cd spicetify-themes/
+run_cmd "cp -r * ~/.config/spicetify/Themes"
+run_cmd "spicetify config current_theme text"
+run_cmd "spicetify apply"
+run_cmd "spicetify config color_scheme Nord"
+run_cmd "spicetify apply"
+cd .. && rm -rf spicetify-themes/
+
 
 # Adicionar usuário aos grupos
 run_cmd "sudo usermod -aG wheel $USER_NAME"
