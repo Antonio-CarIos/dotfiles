@@ -1,19 +1,16 @@
 #!/bin/bash
 
 set -e
+set -o pipefail
 
-run_cmd() {
-  echo
-  echo ">>> $1"
-  eval "$2"
+# Função auxiliar para mostrar comandos
+function run_cmd() {
+    echo -e "\033[1;34m[EXECUTANDO]\033[0m $1"
+    eval $1
+    echo -e "\033[1;32m[OK]\033[0m"
 }
 
-# Variáveis
 USER_NAME=$(whoami)
-DOTFILES_DIR="$HOME/dotfiles"
-CONFIG_DIR="$HOME/.config"
-WALLPAPER_DIR="$CONFIG_DIR/wallpaper"
-ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 
 # Atualizar sistema
 run_cmd "sudo pacman -Syu --noconfirm"
@@ -21,8 +18,8 @@ run_cmd "sudo pacman -Syu --noconfirm"
 # Instalar pacotes base
 run_cmd "sudo pacman -S --noconfirm git base-devel"
 
-# Instalar pacotes principais
-run_cmd "sudo pacman -S hyprland hyprutils hyprland-qtutils hyprpicker hypridle waybar kitty sddm rofi swww swaync wl-clipboard xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl bluez blueman bluedevil celluloid loupe gedit gnome-calculator gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland noto-fonts noto-fonts-extra noto-fonts-emoji ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers"
+# Instalar pacotes principais via pacman
+run_cmd "sudo pacman -S --noconfirm hyprland hyprutils hyprland-qtutils hyprpicker hypridle waybar kitty sddm rofi swww swaync wl-clipboard xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl bluez blueman bluedevil celluloid loupe gedit gnome-calculator gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland noto-fonts noto-fonts-extra noto-fonts-emoji ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers"
 
 # Instalar yay
 if ! command -v yay &> /dev/null; then
@@ -32,62 +29,81 @@ if ! command -v yay &> /dev/null; then
     cd .. && rm -rf yay
 fi
 
-# Instalar pacotes AUR
-run_cmd "yay -S python-pywalfox spicetify-cli spicetify-themes-git"
+# Instalar pacotes via yay
+run_cmd "yay -S --noconfirm python-pywalfox spicetify-cli spicetify-themes-git"
 
-# Instalar ícones Nordzy
-mkdir -p "$CONFIG_DIR/.icons"
+# Instalar Nordzy Icon Theme
+mkdir -p "$HOME/.config/.icons"
 run_cmd "git clone https://github.com/alvatip/Nordzy-icon"
-cd Nordzy-icon
-run_cmd "sudo ./install.sh -d "$CONFIG_DIR/.icons" -c dark"
-cd ..
-rm -rf Nordzy-icon
+cd Nordzy-icon/
+run_cmd "sudo ./install.sh -d $HOME/.config/.icons -c dark"
+cd .. && rm -rf Nordzy-icon/
 
-# Instalar tema GTK Graphite
-mkdir -p "$CONFIG_DIR/.themes"
+# Instalar Graphite GTK Theme
+mkdir -p "$HOME/.config/.themes"
 run_cmd "git clone https://github.com/vinceliuice/Graphite-gtk-theme.git"
 cd Graphite-gtk-theme
-chmod +x install.sh
-run_cmd "sudo ./install.sh -d "$CONFIG_DIR/.themes" -t blue -c dark --tweaks 1 3 4 5"
-cd ..
-rm -rf Graphite-gtk-theme
+run_cmd "chmod +x ./install.sh"
+run_cmd "sudo ./install.sh -d ~/.config/.themes -t blue -c dark --tweaks 1 3 4 5"
+cd .. && rm -rf Graphite-gtk-theme/
 
-# Instalar Oh My Zsh, Powerlevel10k e plugins
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git "$ZSH_CUSTOM/plugins/fast-syntax-highlighting"
+# Instalar oh-my-zsh, powerlevel10k e plugins
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    run_cmd "sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+fi
 
-# Instalar temas Rofi (adi1090x)
-run_cmd "git clone --depth=1 https://github.com/adi1090x/rofi.git"
-cd rofi
-chmod +x setup.sh
-run_cmd "./setup.sh"
-cd ..
-rm -rf rofi
+run_cmd "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \"\${ZSH_CUSTOM:-\$HOME/.oh-my-zsh/custom}/themes/powerlevel10k\""
+run_cmd "git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \"\${ZSH_CUSTOM:-\$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting\""
 
-# Corrigir imagem do Rofi launcher
-sed -i 's|url(".*")|url("'"$WALLPAPER_DIR"'/wallpaper-rofi.png", height)|' "$CONFIG_DIR/rofi/launchers/type-6/style-9.rasi"
+# Mudar shell para ZSH
+run_cmd "chsh -s $(which zsh)"
+run_cmd "chsh -s /bin/zsh"
 
-# Copiar dotfiles
-cp -r "$DOTFILES_DIR/.config/"* "$CONFIG_DIR/"
+# Instalar temas do Spicetify
+run_cmd "git clone --depth=1 https://github.com/spicetify/spicetify-themes.git"
+cd spicetify-themes
+cp -r * ~/.config/spicetify/Themes
+spicetify config current_theme text
+spicetify config color_scheme Nord
+spicetify apply
+cd .. && rm -rf spicetify-themes
 
-# Aplicar wallpaper e gerar tema com pywal
+# Aplicar imagem e tema com pywal e pywalfox
+run_cmd "wal -i ~/.config/wallpaper/wallpaper.png"
+run_cmd "pywalfox update"
+
+# Ajustar imagem do Rofi launcher
+sed -i 's|url(.*)|url("~/.config/wallpaper/wallpaper-rofi.png", height);|' ~/.config/rofi/launchers/type-6/style-9.rasi
+
+# Executar setup do Rofi
+chmod +x ~/.config/rofi/setup.sh
+~/.config/rofi/setup.sh
+
+# Copiar arquivos de configuração do repositório para ~/.config
+run_cmd "cp -r .config/* ~/.config/"
+
+# Copiar arquivos ocultos do repositório para home
+run_cmd "cp .zshrc .p10k.zsh ~/"
+
+# Aplicar papel de parede
 run_cmd "swww init"
-run_cmd "swww img "$WALLPAPER_DIR/wallpaper.png""
-run_cmd "wal -i "$WALLPAPER_DIR/wallpaper.png""
-pywalfox update
+sleep 1
+run_cmd "swww img ~/.config/wallpaper/wallpaper.png"
+
+# Adicionar usuário aos grupos
+run_cmd "sudo usermod -aG wheel $USER_NAME"
+run_cmd "sudo usermod -aG lp $USER_NAME"
+
+# Atualizar diretórios do usuário
+run_cmd "xdg-user-dirs-update"
+
+# Definir Thunar como gerenciador padrão
+run_cmd "xdg-mime default thunar.desktop inode/directory"
 
 # Ativar serviços
-sudo usermod -aG wheel "$USER_NAME"
-sudo usermod -aG lp "$USER_NAME"
-xdg-user-dirs-update
-xdg-mime default thunar.desktop inode/directory
-sudo systemctl enable sddm.service
-sudo systemctl enable bluetooth.service
+run_cmd "sudo systemctl enable sddm.service"
+run_cmd "sudo systemctl enable bluetooth.service"
+run_cmd "sudo systemctl start bluetooth.service"
 
-# Trocar shell padrão para Zsh
-chsh -s $(which zsh)
-chsh -s /bin/zsh
-
-echo
-echo "✅ Instalação concluída. Reinicie para aplicar todas as configurações."
+# Mensagem final
+echo -e "\033[1;35m[FINALIZADO]\033[0m Sistema configurado com sucesso. Recomenda-se reiniciar agora."
