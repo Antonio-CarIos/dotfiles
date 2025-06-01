@@ -46,7 +46,7 @@ Feel free to use this as reference, but keep in mind this is a personal project.
 
 <img src="images/print2.png" alt="Screenshot 2" width="700"/>
 
-<img src="images/print3.png" alt="Screenshot 3" width="700
+<img src="images/print3.png" alt="Screenshot 2" width="700"/>
 
 ---
 
