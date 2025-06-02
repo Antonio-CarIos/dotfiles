@@ -19,7 +19,7 @@ run_cmd "sudo pacman -Syu --noconfirm"
 run_cmd "sudo pacman -S --noconfirm git base-devel"
 
 # Install main packages pacman
-run_cmd "sudo pacman -S hyprland hyprutils hyprland-qtutils hyprpicker hypridle hyprshot waybar kitty sddm rofi swww swaync wl-clipboard btop unzip unrar xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl tlp bluez bluez-utils bluez-tools blueman celluloid loupe gedit gnome-calculator gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland noto-fonts noto-fonts-extra noto-fonts-emoji ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers"
+run_cmd "sudo pacman -S --noconfirm hyprland hyprutils hyprland-qtutils hyprpicker hypridle waybar kitty sddm rofi swww swaync wl-clipboard btop unzip unrar xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl tlp bluez bluez-utils bluez-tools blueman celluloid loupe gedit gnome-calculator gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland noto-fonts noto-fonts-extra noto-fonts-emoji ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers"
 
 # Install yay
 if ! command -v yay &> /dev/null; then
@@ -30,24 +30,7 @@ if ! command -v yay &> /dev/null; then
 fi
 
 # Install AUR packages via yay
-run_cmd "yay -S python-pywalfox spicetify-cli spicetify-themes-git"
-
-
-
-# Install Nordzy Icon Theme
-mkdir -p "$HOME/.config/.icons"
-run_cmd "git clone https://github.com/alvatip/Nordzy-icon"
-cd Nordzy-icon/
-run_cmd "sudo ./install.sh -d $HOME/.config/.icons -c dark"
-cd .. && rm -rf Nordzy-icon/
-
-# Install Graphite GTK Theme
-mkdir -p "$HOME/.config/.themes"
-run_cmd "git clone https://github.com/vinceliuice/Graphite-gtk-theme.git"
-cd Graphite-gtk-theme
-run_cmd "chmod +x ./install.sh"
-run_cmd "sudo ./install.sh -d ~/.config/.themes -t blue -c dark -s standard --tweaks nord normal rimless"
-cd .. && rm -rf Graphite-gtk-theme/
+run_cmd "yay -S python-pywalfox spicetify-cli spicetify-themes-git hyprshot"
 
 # Install oh-my-zsh, powerlevel10k and plugins
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -76,12 +59,6 @@ run_cmd "cp .zshrc .p10k.zsh ~/"
 
 # Adjust Rofi launcher image
 sed -i 's|url(.*)|url("~/.config/wallpaper/wallpaper-rofi.png", height)|' ~/.config/rofi/launchers/type-6/style-9.rasi
-
-# Set wallpaper
-run_cmd "swww init"
-run_cmd "swww-daemon"
-sleep 1
-run_cmd "swww img ~/.config/wallpaper/wallpaper.png"
 
 # Apply wallpaper and theme using pywal and pywalfox
 run_cmd "wal -i ~/.config/wallpaper/wallpaper.png"
