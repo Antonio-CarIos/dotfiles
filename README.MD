@@ -18,6 +18,14 @@ Everything is configured manually and reproducibly through a script that install
 The goal here is to have a **custom system that reflects my workflow and aesthetic**, while keeping it minimal and efficient.  
 The file `packages.txt` documents what each package is used for — and only what's truly needed stays.
 
+After running the `setup.sh` script, reboot your system and log into Hyprland.  
+Then, run the following commands:
+
+```bash
+swww img ~/.config/wallpaper/wallpaper.png # Set wallpaper
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git # Fix Zsh theme warning
+```
+
 Feel free to use this as reference, but keep in mind this is a personal project.
 
 ---

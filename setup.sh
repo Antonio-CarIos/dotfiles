@@ -32,6 +32,19 @@ fi
 # Install AUR packages via yay
 run_cmd "yay -S python-pywalfox spicetify-cli spicetify-themes-git hyprshot"
 
+
+# Install Nordzy Icon Theme
+run_cmd "git clone https://github.com/alvatip/Nordzy-icon.git"
+cd Nordzy-icon/
+run_cmd "./install.sh -c dark"
+cd .. && rm -rf Nordzy-icon/
+
+# Install Graphite GTK Theme
+run_cmd "git clone https://github.com/vinceliuice/Graphite-gtk-theme.git"
+cd Graphite-gtk-theme/
+run_cmd "./install.sh -t blue -c dark -s standard --tweaks nord normal rimless"
+cd .. && rm -rf Graphite-gtk-theme/
+
 # Install oh-my-zsh, powerlevel10k and plugins
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     run_cmd "sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
