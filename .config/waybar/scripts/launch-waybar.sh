@@ -6,6 +6,12 @@ echo "Starting Waybar launch script" > /tmp/waybar-launch.log
 # Kill any running waybar instances
 killall -q waybar
 
+# Change theme
+CAMINHO="$HOME/.cache/wal/colors-waybar.css"
+DESTINO="$HOME/.config/waybar/"
+
+cp "$CAMINHO" "$DESTINO"
+
 # Wait until the processes have been shut down
 while pgrep -u $UID -x waybar >/dev/null; do 
     sleep 0.5

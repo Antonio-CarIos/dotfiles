@@ -1,0 +1,28 @@
+{
+    "checksum": "3e78393fa3f331a78ea12f1e486efa24",
+    "wallpaper": "/home/lacum/Imagens/Mob.png",
+    "alpha": "100",
+    "special": {
+        "background": "#080a14",
+        "foreground": "#c1c1c4",
+        "cursor": "#c1c1c4"
+    },
+    "colors": {
+        "color0": "#080a14",
+        "color1": "#676C94",
+        "color2": "#3469C4",
+        "color3": "#D049CE",
+        "color4": "#F747E9",
+        "color5": "#5AB6BC",
+        "color6": "#A6B0BC",
+        "color7": "#c1c1c4",
+        "color8": "#585a6b",
+        "color9": "#676C94",
+        "color10": "#3469C4",
+        "color11": "#D049CE",
+        "color12": "#F747E9",
+        "color13": "#5AB6BC",
+        "color14": "#A6B0BC",
+        "color15": "#c1c1c4"
+    }
+}

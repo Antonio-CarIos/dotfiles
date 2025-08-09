@@ -1,0 +1,27 @@
+#! /usr/bin/env ruby
+# encoding: UTF-8
+
+$:.push File.expand_path("../../lib", __FILE__)
+require "latest"
+
+if ARGV.empty?
+  puts Latest.usage
+elsif ARGV.first =~ /^-(v|-version)$/
+  puts "Latest v" + Latest::VERSION
+else
+  ARGV.each_with_index do |name, index|
+    print name + " "    
+    begin
+      gem = Latest::Gem.new(name)    
+      if ARGV[index + 1] == "--pre"
+        ARGV.slice!(index + 1, 1)
+        gem.pre = true
+        print "--pre "
+      end
+      puts "#{gem.version} (#{gem.downloads} download#{'s' unless gem.downloads == 1})"
+    rescue => e
+      print "[Error] "
+      puts e.message
+    end
+  end
+end

@@ -1,0 +1,8 @@
+U:RDoc::Attr[iI"shadowed_files:ETI"$Zeitwerk::Loader#shadowed_files;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Verbatim;	[I"KA shadowed file is a file managed by this loader that is ignored when
+;TI"Gsetting autoloads because its matching constant is already taken.
+;TI"
+;TI"NThis private set is populated lazily, as we descend. For example, if the
+;TI"Oloader has only scanned the top-level, `shadowed_files` does not have the
+;TI"=shadowed files that may exist deep in the project tree.
+;T:@format0o:RDoc::Markup::Paragraph;	[I": Set[String];T:
+@fileI"lib/zeitwerk/loader.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Zeitwerk::Loader;TcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"offenses:ETI"7RubyLsp::Requests::Support::RuboCopRunner#offenses;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"%: Array[::RuboCop::Cop::Offense];T:
+@fileI"4lib/ruby_lsp/requests/support/rubocop_runner.rb;T:0@omit_headings_from_table_of_contents_below0F@I".RubyLsp::Requests::Support::RuboCopRunner;TcRDoc::NormalClass0

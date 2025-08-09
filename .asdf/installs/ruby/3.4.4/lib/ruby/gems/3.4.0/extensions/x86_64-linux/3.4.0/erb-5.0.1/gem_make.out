@@ -1,0 +1,18 @@
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/erb-5.0.1/ext/erb/escape
+/home/lacum/.asdf/installs/ruby/3.4.4/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/erb-5.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250607-19845-wq6oof sitelibdir\=./.gem.20250607-19845-wq6oof clean
+
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/erb-5.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250607-19845-wq6oof sitelibdir\=./.gem.20250607-19845-wq6oof
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/erb-5.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250607-19845-wq6oof sitelibdir\=./.gem.20250607-19845-wq6oof install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20250607-19845-wq6oof/erb
+
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/erb-5.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250607-19845-wq6oof sitelibdir\=./.gem.20250607-19845-wq6oof clean

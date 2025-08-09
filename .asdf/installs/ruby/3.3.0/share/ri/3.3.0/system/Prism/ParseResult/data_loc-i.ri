@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"data_loc:ETI" Prism::ParseResult#data_loc;TI"R;T:privateo:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"PAn optional location that represents the location of the content after the ;TI"L__END__ marker. This content is loaded into the DATA constant when the ;TI"7file being parsed is the main file being executed.;T:
+@fileI"lib/prism/parse_result.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Prism::ParseResult;TcRDoc::NormalClass0

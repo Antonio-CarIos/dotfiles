@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# asdf-plugin: ruby 3.4.4
+# asdf-plugin: ruby 3.3.7
+# asdf-plugin: ruby 3.3.0
+# asdf-plugin: ruby 3.2.2
+exec asdf exec "rake" "$@"

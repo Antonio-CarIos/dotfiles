@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/lacum/.config/wallpaper/basquiat-art9.jpg"
+let background = "#22190e"
+let foreground = "#c7c5c2"
+let cursor     = "#c7c5c2"
+
+" Colors
+let color0  = "#22190e"
+let color1  = "#60708A"
+let color2  = "#55B5A9"
+let color3  = "#A4A69F"
+let color4  = "#C9B6AD"
+let color5  = "#D9CCB5"
+let color6  = "#DED7CA"
+let color7  = "#c7c5c2"
+let color8  = "#72695e"
+let color9  = "#60708A"
+let color10 = "#55B5A9"
+let color11 = "#A4A69F"
+let color12 = "#C9B6AD"
+let color13 = "#D9CCB5"
+let color14 = "#DED7CA"
+let color15 = "#c7c5c2"

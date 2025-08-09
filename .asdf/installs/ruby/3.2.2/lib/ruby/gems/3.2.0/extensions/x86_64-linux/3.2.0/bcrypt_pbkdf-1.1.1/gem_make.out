@@ -1,0 +1,30 @@
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+/home/lacum/.asdf/installs/ruby/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250615-52804-7fsw8y sitelibdir\=./.gem.20250615-52804-7fsw8y clean
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250615-52804-7fsw8y sitelibdir\=./.gem.20250615-52804-7fsw8y
+compiling bcrypt_pbkdf.c
+bcrypt_pbkdf.c: In function ‘bcrypt_hash’:
+bcrypt_pbkdf.c:61:13: warning: initializer-string for array of ‘unsigned char’ truncates NUL terminator but destination lacks ‘nonstring’ attribute (33 chars into 32 available) [-Wunterminated-string-initialization]
+   61 |             "OxychromaticBlowfishSwatDynamite";
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling bcrypt_pbkdf_ext.c
+compiling blowfish.c
+compiling explicit_bzero.c
+compiling hash_sha512.c
+linking shared-object bcrypt_pbkdf_ext.so
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250615-52804-7fsw8y sitelibdir\=./.gem.20250615-52804-7fsw8y install
+/usr/bin/install -c -m 0755 bcrypt_pbkdf_ext.so ./.gem.20250615-52804-7fsw8y
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250615-52804-7fsw8y sitelibdir\=./.gem.20250615-52804-7fsw8y clean

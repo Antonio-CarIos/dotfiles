@@ -1,0 +1,28 @@
+{
+    "checksum": "d27b651d525e0effc274b785ee3d64bf",
+    "wallpaper": "/home/lacum/.config/wallpaper/berserk.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#1b1e41",
+        "foreground": "#c6c6cf",
+        "cursor": "#c6c6cf"
+    },
+    "colors": {
+        "color0": "#1b1e41",
+        "color1": "#2D53A8",
+        "color2": "#4B4997",
+        "color3": "#515CA4",
+        "color4": "#8A6A9B",
+        "color5": "#619ECF",
+        "color6": "#6FB6D8",
+        "color7": "#c6c6cf",
+        "color8": "#6a6c82",
+        "color9": "#2D53A8",
+        "color10": "#4B4997",
+        "color11": "#515CA4",
+        "color12": "#8A6A9B",
+        "color13": "#619ECF",
+        "color14": "#6FB6D8",
+        "color15": "#c6c6cf"
+    }
+}

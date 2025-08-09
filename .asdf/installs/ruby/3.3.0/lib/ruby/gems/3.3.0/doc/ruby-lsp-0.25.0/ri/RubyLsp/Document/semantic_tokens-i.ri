@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"semantic_tokens:ETI"&RubyLsp::Document#semantic_tokens;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"+: (Interface::SemanticTokens | Object);T:
+@fileI"lib/ruby_lsp/document.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RubyLsp::Document;TcRDoc::NormalClass0

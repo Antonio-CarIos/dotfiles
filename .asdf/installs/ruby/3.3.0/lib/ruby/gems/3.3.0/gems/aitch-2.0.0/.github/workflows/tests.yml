@@ -1,0 +1,50 @@
+---
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Tests with Ruby ${{ matrix.ruby }}
+    runs-on: "ubuntu-latest"
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: ["3.0", "3.1", "3.2"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: >
+            ${{ runner.os }}-${{ matrix.ruby }}-gems-${{
+            hashFiles('aitch.gemspec') }}
+          restore-keys: >
+            ${{ runner.os }}-${{ matrix.ruby }}-gems-${{
+            hashFiles('aitch.gemspec') }}
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: Install gem dependencies
+        env:
+          RAILS_ENV: test
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+          bundle update --jobs 4 --retry 3
+
+      - name: Run Tests
+        env:
+          RAILS_ENV: test
+        run: |
+          bundle exec rake

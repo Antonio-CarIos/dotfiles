@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# asdf-plugin: ruby 3.4.4
+# asdf-plugin: ruby 3.3.7
+# asdf-plugin: ruby 3.3.0
+exec asdf exec "syntax_suggest" "$@"

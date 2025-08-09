@@ -1,0 +1,28 @@
+{
+    "checksum": "3fa231a1b6c3a86c49a43a8e108a10b2",
+    "wallpaper": "/home/lacum/Imagens/gorillaz.png",
+    "alpha": "100",
+    "special": {
+        "background": "#22170f",
+        "foreground": "#c7c5c3",
+        "cursor": "#c7c5c3"
+    },
+    "colors": {
+        "color0": "#22170f",
+        "color1": "#7f4221",
+        "color2": "#a55312",
+        "color3": "#995421",
+        "color4": "#3d7816",
+        "color5": "#ab6915",
+        "color6": "#b16c24",
+        "color7": "#9c9591",
+        "color8": "#73675e",
+        "color9": "#AA592C",
+        "color10": "#DD6F19",
+        "color11": "#CD712C",
+        "color12": "#52A01E",
+        "color13": "#E58D1C",
+        "color14": "#EC9031",
+        "color15": "#c7c5c3"
+    }
+}

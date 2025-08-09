@@ -1,0 +1,28 @@
+{
+    "checksum": "92af0efa1eff19d95bb7185583824ec0",
+    "wallpaper": "/home/lacum/Downloads/wp11553920-blue-4k-abstract-liquid-wallpapers.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#295161",
+        "foreground": "#c9d3d7",
+        "cursor": "#c9d3d7"
+    },
+    "colors": {
+        "color0": "#295161",
+        "color1": "#855d63",
+        "color2": "#459487",
+        "color3": "#4d9387",
+        "color4": "#217b95",
+        "color5": "#368490",
+        "color6": "#78888d",
+        "color7": "#a6acae",
+        "color8": "#798a91",
+        "color9": "#B27C85",
+        "color10": "#5CC6B5",
+        "color11": "#67C5B5",
+        "color12": "#2DA4C7",
+        "color13": "#49B0C0",
+        "color14": "#A1B6BD",
+        "color15": "#c9d3d7"
+    }
+}

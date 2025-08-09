@@ -1,0 +1,28 @@
+{
+    "checksum": "9a966727d07a792189ee2acece7db388",
+    "wallpaper": "/home/lacum/.config/wallpaper/basquiat.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#180a18",
+        "foreground": "#c5c1c5",
+        "cursor": "#c5c1c5"
+    },
+    "colors": {
+        "color0": "#180a18",
+        "color1": "#727F87",
+        "color2": "#A4A19F",
+        "color3": "#C9B7AF",
+        "color4": "#D0C6B9",
+        "color5": "#D7D4CD",
+        "color6": "#E2DCD5",
+        "color7": "#c5c1c5",
+        "color8": "#6d596d",
+        "color9": "#727F87",
+        "color10": "#A4A19F",
+        "color11": "#C9B7AF",
+        "color12": "#D0C6B9",
+        "color13": "#D7D4CD",
+        "color14": "#E2DCD5",
+        "color15": "#c5c1c5"
+    }
+}

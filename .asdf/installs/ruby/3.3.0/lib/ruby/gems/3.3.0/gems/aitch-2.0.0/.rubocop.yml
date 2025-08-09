@@ -1,0 +1,24 @@
+---
+inherit_gem:
+  rubocop-fnando: .rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+
+Layout/LineLength:
+  Exclude:
+    - test/**/*.rb
+
+Naming/AccessorMethodName:
+  Exclude:
+    - lib/aitch/request.rb
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: false
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+Minitest/MultipleAssertions:
+  Enabled: false

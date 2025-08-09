@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"length:ETI"JRubyLsp::ResponseBuilders::SemanticHighlighting::SemanticToken#length;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I": Integer;T:
+@fileI"<lib/ruby_lsp/response_builders/semantic_highlighting.rb;T:0@omit_headings_from_table_of_contents_below0F@I"CRubyLsp::ResponseBuilders::SemanticHighlighting::SemanticToken;TcRDoc::NormalClass0

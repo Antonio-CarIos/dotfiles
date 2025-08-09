@@ -1,0 +1,28 @@
+{
+    "checksum": "b81e6af601fabbc726ddfa73176ef0fb",
+    "wallpaper": "/home/lacum/Imagens/noodle.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0b050b",
+        "foreground": "#c2c0c2",
+        "cursor": "#c2c0c2"
+    },
+    "colors": {
+        "color0": "#0b050b",
+        "color1": "#497A84",
+        "color2": "#DB3686",
+        "color3": "#E03889",
+        "color4": "#D7528A",
+        "color5": "#419DAC",
+        "color6": "#BCB4A3",
+        "color7": "#c2c0c2",
+        "color8": "#675467",
+        "color9": "#497A84",
+        "color10": "#DB3686",
+        "color11": "#E03889",
+        "color12": "#D7528A",
+        "color13": "#419DAC",
+        "color14": "#BCB4A3",
+        "color15": "#c2c0c2"
+    }
+}

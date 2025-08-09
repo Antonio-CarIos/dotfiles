@@ -1,0 +1,28 @@
+{
+    "checksum": "92af0efa1eff19d95bb7185583824ec0",
+    "wallpaper": "/home/lacum/Imagens/hydro-dip.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#295161",
+        "foreground": "#c9d3d7",
+        "cursor": "#c9d3d7"
+    },
+    "colors": {
+        "color0": "#295161",
+        "color1": "#B27C85",
+        "color2": "#5CC6B5",
+        "color3": "#67C5B5",
+        "color4": "#2DA4C7",
+        "color5": "#49B0C0",
+        "color6": "#A1B6BD",
+        "color7": "#c9d3d7",
+        "color8": "#798a91",
+        "color9": "#B27C85",
+        "color10": "#5CC6B5",
+        "color11": "#67C5B5",
+        "color12": "#2DA4C7",
+        "color13": "#49B0C0",
+        "color14": "#A1B6BD",
+        "color15": "#c9d3d7"
+    }
+}

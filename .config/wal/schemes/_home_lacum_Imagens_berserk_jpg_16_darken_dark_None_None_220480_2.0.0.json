@@ -1,0 +1,28 @@
+{
+    "checksum": "d27b651d525e0effc274b785ee3d64bf",
+    "wallpaper": "/home/lacum/Imagens/berserk.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#1b1e41",
+        "foreground": "#c6c6cf",
+        "cursor": "#c6c6cf"
+    },
+    "colors": {
+        "color0": "#1b1e41",
+        "color1": "#213e7e",
+        "color2": "#383671",
+        "color3": "#3c457b",
+        "color4": "#674f74",
+        "color5": "#48769b",
+        "color6": "#5388a2",
+        "color7": "#9b9ca5",
+        "color8": "#6a6c82",
+        "color9": "#2D53A8",
+        "color10": "#4B4997",
+        "color11": "#515CA4",
+        "color12": "#8A6A9B",
+        "color13": "#619ECF",
+        "color14": "#6FB6D8",
+        "color15": "#c6c6cf"
+    }
+}

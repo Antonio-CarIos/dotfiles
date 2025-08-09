@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"rescue_clause:ETI"#Prism::BeginNode#rescue_clause;TI"R;T:privateo:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"+attr_reader rescue_clause: RescueNode?;T:
+@fileI"lib/prism/node.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Prism::BeginNode;TcRDoc::NormalClass0

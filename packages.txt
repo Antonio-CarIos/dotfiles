@@ -2,9 +2,9 @@ sudo pacman -Syu
 
 sudo pacman -S git base-devel
 
-sudo pacman -S hyprland hyprutils hyprland-qtutils hyprpicker hypridle hyprshot waybar kitty sddm rofi swww swaync wl-clipboard btop unzip xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl bluez blueman bluedevil celluloid loupe gedit gnome-calculator gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland noto-fonts noto-fonts-extra noto-fonts-emoji ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers
+sudo pacman -S hyprland hyprutils hyprland-qtutils hyprpicker hypridle hyprshot waybar kitty sddm rofi swww swaync wl-clipboard btop unzip xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk python python-pip python-pywal nwg-look sassc pipewire udiskie network-manager-applet pavucontrol pamixer playerctl bluez blueman bluedevil celluloid loupe  gnome-calculator gnome-themes-extra polkit-gnome pacman-contrib curl less zsh zsh-syntax-highlighting bash-completion qt5-wayland qt6-wayland noto-fonts noto-fonts-extra noto-fonts-emoji ttf-mononoki-nerd thunar firefox firefox-i18n-pt-br discord spotify-launcher steam ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer vulkan-radeon lib32-vulkan-radeon gamemode lib32-gamemode mesa lib32-mesa linux-zen linux-zen-headers unrar tar
 
-yay -S python-pywalfox spicetify-cli spicetify-themes-git 
+yay -S python-pywalfox spicetify-cli spicetify-themes-git insomnia 
 
 //Instalation ZordzyIcon
 mkdir $HOME/.config/.icons

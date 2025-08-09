@@ -1,0 +1,18 @@
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/home/lacum/.asdf/installs/ruby/3.3.0/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250707-20774-xb43zl sitelibdir\=./.gem.20250707-20774-xb43zl clean
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250707-20774-xb43zl sitelibdir\=./.gem.20250707-20774-xb43zl
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250707-20774-xb43zl sitelibdir\=./.gem.20250707-20774-xb43zl install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20250707-20774-xb43zl/racc
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250707-20774-xb43zl sitelibdir\=./.gem.20250707-20774-xb43zl clean

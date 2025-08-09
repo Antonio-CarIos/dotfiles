@@ -1,0 +1,22 @@
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+/home/lacum/.asdf/installs/ruby/3.3.0/bin/ruby extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... no
+creating Makefile
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250707-36258-ipo7ph sitelibdir\=./.gem.20250707-36258-ipo7ph clean
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250707-36258-ipo7ph sitelibdir\=./.gem.20250707-36258-ipo7ph
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250707-36258-ipo7ph sitelibdir\=./.gem.20250707-36258-ipo7ph install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20250707-36258-ipo7ph/bootsnap
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250707-36258-ipo7ph sitelibdir\=./.gem.20250707-36258-ipo7ph clean

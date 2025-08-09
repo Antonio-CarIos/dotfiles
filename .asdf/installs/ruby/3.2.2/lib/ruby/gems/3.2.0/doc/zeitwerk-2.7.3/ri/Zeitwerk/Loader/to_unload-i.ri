@@ -1,0 +1,8 @@
+U:RDoc::Attr[iI"to_unload:ETI"Zeitwerk::Loader#to_unload;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Verbatim;	[
+I"KIf reloading is enabled, this collection maps autoload paths to their
+;TI"autoloaded crefs.
+;TI"
+;TI"OOn unload, the autoload paths are passed to callbacks, files deleted from
+;TI"2$LOADED_FEATURES, and the crefs are deleted.
+;T:@format0o:RDoc::Markup::Paragraph;	[I"#: Hash[String, Zeitwerk::Cref];T:
+@fileI"lib/zeitwerk/loader.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Zeitwerk::Loader;TcRDoc::NormalClass0

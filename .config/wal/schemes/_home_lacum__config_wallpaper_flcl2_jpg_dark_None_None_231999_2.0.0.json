@@ -1,0 +1,28 @@
+{
+    "checksum": "2405267a17c2302be0faaf350d237099",
+    "wallpaper": "/home/lacum/.config/wallpaper/flcl2.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#090404",
+        "foreground": "#c1c0c0",
+        "cursor": "#c1c0c0"
+    },
+    "colors": {
+        "color0": "#090404",
+        "color1": "#A27A49",
+        "color2": "#F19339",
+        "color3": "#CF8E4A",
+        "color4": "#0C6793",
+        "color5": "#027DB7",
+        "color6": "#047EC2",
+        "color7": "#c1c0c0",
+        "color8": "#665353",
+        "color9": "#A27A49",
+        "color10": "#F19339",
+        "color11": "#CF8E4A",
+        "color12": "#0C6793",
+        "color13": "#027DB7",
+        "color14": "#047EC2",
+        "color15": "#c1c0c0"
+    }
+}

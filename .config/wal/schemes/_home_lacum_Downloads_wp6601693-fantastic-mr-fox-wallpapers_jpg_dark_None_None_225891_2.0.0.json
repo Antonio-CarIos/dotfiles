@@ -1,0 +1,28 @@
+{
+    "checksum": "7a316385cc98bfbfd13bda25f33ff66b",
+    "wallpaper": "/home/lacum/Downloads/wp6601693-fantastic-mr-fox-wallpapers.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#2c1c12",
+        "foreground": "#cac6c3",
+        "cursor": "#cac6c3"
+    },
+    "colors": {
+        "color0": "#2c1c12",
+        "color1": "#C87842",
+        "color2": "#D6883A",
+        "color3": "#BD8247",
+        "color4": "#DA8D49",
+        "color5": "#E7AC5B",
+        "color6": "#F0C65D",
+        "color7": "#cac6c3",
+        "color8": "#776a61",
+        "color9": "#C87842",
+        "color10": "#D6883A",
+        "color11": "#BD8247",
+        "color12": "#DA8D49",
+        "color13": "#E7AC5B",
+        "color14": "#F0C65D",
+        "color15": "#cac6c3"
+    }
+}

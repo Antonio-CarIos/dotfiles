@@ -1,0 +1,19 @@
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/stringio-3.1.7/ext/stringio
+/home/lacum/.asdf/installs/ruby/3.4.4/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250607-19845-ijgbk sitelibdir\=./.gem.20250607-19845-ijgbk clean
+
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250607-19845-ijgbk sitelibdir\=./.gem.20250607-19845-ijgbk
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250607-19845-ijgbk sitelibdir\=./.gem.20250607-19845-ijgbk install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20250607-19845-ijgbk
+
+current directory: /home/lacum/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250607-19845-ijgbk sitelibdir\=./.gem.20250607-19845-ijgbk clean

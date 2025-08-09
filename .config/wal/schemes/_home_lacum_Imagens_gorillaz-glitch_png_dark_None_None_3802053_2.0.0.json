@@ -1,0 +1,28 @@
+{
+    "checksum": "803aaf38d443aaae6d1a24e93066f027",
+    "wallpaper": "/home/lacum/Imagens/gorillaz-glitch.png",
+    "alpha": "100",
+    "special": {
+        "background": "#151831",
+        "foreground": "#c4c5cb",
+        "cursor": "#c4c5cb"
+    },
+    "colors": {
+        "color0": "#151831",
+        "color1": "#5C6095",
+        "color2": "#A260A3",
+        "color3": "#B673B7",
+        "color4": "#2EA09C",
+        "color5": "#549DA2",
+        "color6": "#5ED0B1",
+        "color7": "#c4c5cb",
+        "color8": "#64667a",
+        "color9": "#5C6095",
+        "color10": "#A260A3",
+        "color11": "#B673B7",
+        "color12": "#2EA09C",
+        "color13": "#549DA2",
+        "color14": "#5ED0B1",
+        "color15": "#c4c5cb"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "checksum": "e32281c25ca02d28df8435ab5264987e",
+    "wallpaper": "/home/lacum/.config/wallpaper/hotline-miami2.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#141128",
+        "foreground": "#c4c3c9",
+        "cursor": "#c4c3c9"
+    },
+    "colors": {
+        "color0": "#141128",
+        "color1": "#C90160",
+        "color2": "#C91265",
+        "color3": "#AE5B72",
+        "color4": "#C0AE7A",
+        "color5": "#C14C88",
+        "color6": "#D7588F",
+        "color7": "#c4c3c9",
+        "color8": "#636076",
+        "color9": "#C90160",
+        "color10": "#C91265",
+        "color11": "#AE5B72",
+        "color12": "#C0AE7A",
+        "color13": "#C14C88",
+        "color14": "#D7588F",
+        "color15": "#c4c3c9"
+    }
+}

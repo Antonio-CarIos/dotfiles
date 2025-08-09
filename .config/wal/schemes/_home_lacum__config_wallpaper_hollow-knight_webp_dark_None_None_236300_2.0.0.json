@@ -1,0 +1,28 @@
+{
+    "checksum": "5a8a7531be5e6f1b22ff660a3f62bbfc",
+    "wallpaper": "/home/lacum/.config/wallpaper/hollow-knight.webp",
+    "alpha": "100",
+    "special": {
+        "background": "#150910",
+        "foreground": "#c4c1c3",
+        "cursor": "#c4c1c3"
+    },
+    "colors": {
+        "color0": "#150910",
+        "color1": "#983654",
+        "color2": "#C14660",
+        "color3": "#343E82",
+        "color4": "#3C4D8A",
+        "color5": "#4A619B",
+        "color6": "#91628C",
+        "color7": "#c4c1c3",
+        "color8": "#6c5863",
+        "color9": "#983654",
+        "color10": "#C14660",
+        "color11": "#343E82",
+        "color12": "#3C4D8A",
+        "color13": "#4A619B",
+        "color14": "#91628C",
+        "color15": "#c4c1c3"
+    }
+}

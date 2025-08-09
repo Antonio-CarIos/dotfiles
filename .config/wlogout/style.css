@@ -1,0 +1,81 @@
+* {
+    background-image: none;
+    font-size: 18px;
+}
+
+@import "colors-waybar.css";
+
+window {
+    background-color: transparent; 
+}
+
+
+button {
+    color: @foreground;
+    background-color: @background; 
+    outline-style: none;
+    border: none;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%; 
+    border-radius: 0px;     
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+#lock {
+    background-image: image(url("$HOME/.config/wlogout/icons/lock_black.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png")); border-radius: 60px 0px 0px 0px;
+    margin: 80px 0px 0px 180px;
+}
+
+#shutdown {
+    background-image: image(url("$HOME/.config/wlogout/icons/shutdown_black.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    border-radius: 0px 60px 0px 0px;
+    margin: 80px 180px 0px 0px;
+}
+
+#logout {
+    background-image: image(url("$HOME/.config/wlogout/icons/logout_black.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+    border-radius: 0px 0px 0px 60px;
+    margin: 0px 0px 80px 180px;
+}
+
+#reboot {
+    background-image: image(url("$HOME/.config/wlogout/icons/reboot_black.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    border-radius: 0px 0px 60px 0px;
+    margin: 0px 180px 80px 0px;
+}
+
+
+button:focus {
+    background-color: @color3;
+    background-size: 20%;
+}
+
+
+button:focus {
+    background-color: rgba(245,194,231, 0.1);
+    background-size: 20%;
+}
+
+button:focus#lock {
+    border-radius: 32px 32px 0px 32px;
+    margin: 50px 0px 0px 150px;
+}
+
+button:focus#logout {
+    border-radius: 32px 0px 32px 32px;
+    margin: 0px 0px 50px 150px;
+}
+
+button:focus#shutdown {
+    border-radius: 32px 32px 32px 0px;
+    margin: 50px 150px 0px 0px;
+}
+
+button:focus#reboot {
+    border-radius: 0px 32px 32px 32px;
+    margin: 0px 150px 50px 0px;
+}

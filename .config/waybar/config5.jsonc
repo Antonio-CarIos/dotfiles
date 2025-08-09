@@ -1,0 +1,124 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+    "margin-bottom": 0,
+    "spacing": 6,
+    "output": "eDP-1",
+    
+    "modules-left": [
+        "custom/arch",
+        "clock",
+        "custom/media"
+    ],
+    
+    "modules-center": [ 
+        "hyprland/workspaces"
+    ],
+    
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "tray"
+       
+    ],
+    
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "all-outputs": true,
+        "sort-by-number": true,
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "show-special": false,
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": []
+        
+        }
+    },
+    
+    "clock": {
+        "format": "󰥔  {:%I:%M %p}",
+        "format-alt": "󰃭  {:%a, %b %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": "mode"
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 40,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "interval" : 1
+    },
+    
+    "network": {
+        "format-wifi": "󰖩  {essid}",
+        "format-ethernet": "󰛳 Ethernet",
+        "format-disconnected": "󰖪  Disconnected",
+        "on-click": "nm-applet"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "󰟎",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": "󰟎",
+            "hands-free": "󰟎",
+            "headset": "",
+            "phone": "",
+            "portable": "󰟎",
+            "car": "󰟎",
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "smooth-scrolling-threshold": 1,
+        "interval": 1
+    },
+    
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    
+    
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": false
+    },
+    
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": " ",
+            "Paused": " ",
+            "Stopped": "󰙦 "
+        },
+        "max-length": 40,
+        "exec": "playerctl metadata --format '{\"text\": \"{{title}}\", \"tooltip\": \"{{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' 2>/dev/null",
+        "interval": 1,
+        "on-click": "playerctl play-pause"
+    }
+}

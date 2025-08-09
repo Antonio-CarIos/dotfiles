@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/lacum/.config/wallpaper/wallpaper.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0F2237",
+        "foreground": "#ccdccf",
+        "cursor": "#ccdccf"
+    },
+    "colors": {
+        "color0": "#0F2237",
+        "color1": "#3B8893",
+        "color2": "#518D93",
+        "color3": "#679E9C",
+        "color4": "#75A9A4",
+        "color5": "#91B19D",
+        "color6": "#8CB7A9",
+        "color7": "#ccdccf",
+        "color8": "#8e9a90",
+        "color9": "#3B8893",
+        "color10": "#518D93",
+        "color11": "#679E9C",
+        "color12": "#75A9A4",
+        "color13": "#91B19D",
+        "color14": "#8CB7A9",
+        "color15": "#ccdccf"
+    }
+}

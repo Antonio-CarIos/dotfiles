@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# asdf-plugin: nodejs 22.16.0
+exec asdf exec "corepack" "$@"

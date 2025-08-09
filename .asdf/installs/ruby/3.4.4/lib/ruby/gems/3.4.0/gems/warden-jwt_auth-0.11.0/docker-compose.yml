@@ -1,0 +1,12 @@
+version: '2'
+services:
+  app:
+    build: .
+    image: warden_jwt_auth
+    command: bash -c "bundle && tail -f Gemfile"
+    volumes:
+      - .:/home/warden_jwt_auth_user/app
+    tty: true
+    stdin_open: true
+    tmpfs:
+      - /tmp

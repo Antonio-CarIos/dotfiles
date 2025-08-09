@@ -1,148 +1,250 @@
-* {
-    border: none;
-    border-radius: 0;
-    font-family: "SF Pro Display", "Mononki Nerd Font Propo", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    min-height: 0;
-}
+ @import "colors-waybar.css";
 
-window#waybar {
-    background: transparent;
-    color: #0F2237;
-}
+ * {
+     border: 0px;
+     padding: 0px 0px;
+     font-family: "SF Pro Display", "Mononki Nerd Font Propo", sans-serif;
+     /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+     /* font-family: "Hack Nerd Font"; */
+     font-size: 12px;
+     font-weight: 500;
+     /* padding-bottom:4px;
+     padding-top: 4px; */
+ }
 
-#custom-arch {
-    background-color: #ccdccf;
-    font-size: 18px;
-    padding: 2px 13px 2px 10px;
-    margin: 1px 4px 2px 0;
-    border-radius: 12px;
-    color: #2c8694;
-    border: 1px solid #0f0f0f;
-    box-shadow: 3px 2px 3px 0px rgba(15, 15, 15, 0.762);
-}
+ window#waybar {
+     border: 0px solid rgba(0, 0, 0, 0);
+     /* border-radius: 10px; */
+     /* background:#2d2a2e; */
+     background-color: rgba(36, 39, 58, 0.45);
+     /*background-color: rgba(0, 0, 0, 0);*/
+     /*background-color: shade(#22170f, 0.95);*/
+     /*border-bottom: 2px solid @test*/
+ }
 
-#clock {
-    background-color: #ccdccf;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 2px 10px 2px 10px;
-    margin: 1px 4px 2px;
-    border-radius: 10px;
-    color: #2c8694;
-    border: 1px solid #0f0f0f;
-    box-shadow: 3px 2px 3px 0px rgba(15, 15, 15, 0.762);
-}
+ #workspaces button {
+     margin: 0px 0px;
+     padding: 2px 6px 2px 0px;
+     margin: 0px 6px 0px 6px;
+     
+ }
 
-#custom-media {
-    background-color: #ccdccf;
-    color: #0F2237;
-    min-width: 100px;
-    padding: 2px 10px 2px 10px;
-    margin: 1px 4px 2px 3px;
-    border-radius: 10px;
-    font-size: 12px;
-    border: 1px solid #0f0f0f;
-    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
-}
+ #workspaces button:hover {
+     /* border-radius: 20px; */
+     box-shadow: none;
+     /* Remove predefined box-shadow */
+     text-shadow: none;
+     /* Remove predefined text-shadow */
+     border: 0px;
+     background: none;
+ }
 
-#custom-media.Playing {
-    color: #2c8694;
-}
+ #workspaces button:hover * {
+     color: @color6;
+ }
 
-#custom-media.Paused {
-    color: #8e9a90;
-}
+ #workspaces * {
+     font-size: 17px;
+     color: whitesmoke;
+ }
 
-#workspaces {
-    background-color: #ccdccf;
-    border-radius: 10px;
-    margin: 1px 4px 2px;
-    padding: 2px 4px 2px 4px;
-    border: 1px solid #0f0f0f;
-    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
-}
 
-#workspaces button {
-    padding: 2px 6px;
-    color: #2c8694;
-    border-radius: 6px;
-    margin: 1px;
-    font-size: 12px;
-    min-width: 20px;
-    background: transparent;
-}
+ #workspaces button.active {
+     border-radius: 0px;
+     border-bottom: 2px solid @color6;
 
-#workspaces button:hover {
-    background: #91B19D;
-    color: #0F2237;
-}
+ }
 
-#workspaces button.active {
-    color: #2c8694;
-}
+ #workspaces button.active * {
+     color: @color6;
+ }
 
-#workspaces button.urgent {
-    background-color: #3B8893;
-    color: #ccdccf;
-}
 
-/* Right modules */
-#pulseaudio {
-    background-color: #ccdccf;
-    padding: 2px 8px 2px 8px;
-    margin: 1px 4px 2px;
-    border-radius: 10px;
-    color: #2c8694;
-    font-size: 12px;
-    border: 1px solid #0f0f0f;
-    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
-}
+ #clock,
+ #custom-cava-internal,
+ #battery,
+ #memory,
+ #idle_inhibitor,
+ #backlight,
+ #network,
+ #pulseaudio,
+ #mode,
+ #tray,
+ #custom-power,
+ #custom-pacman,
+ #mpd {
+     padding: 1px 9px;
+     border-style: solid;
+     /* background-color: shade(@base, 1); */
+     /*background-color: rgba(36, 39, 58, 1);*/
+     opacity: 1;
+     margin: 3px 0px;
+ }
 
-#network {
-    background-color: #ccdccf;
-    padding: 2px 10px;
-    margin: 1px 4px 2px;
-    border-radius: 10px;
-    color: #2c8694;
-    font-size: 12px;
-    border: 1px solid #0f0f0f;
-    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
-}
+ /* -----------------------------------------------------------------------------
+  * Module styles
+  * -------------------------------------------------------------------------- */
+ #custom-cava-internal {
+     border-radius: 10px;
+     color: @color4;
+ }
 
-#battery {
-    background-color: #ccdccf;
-    padding: 2px 8px 2px 8px;
-    margin: 1px 4px 2px 4px;
-    border-radius: 10px;
-    color: #2c8694;
-    font-size: 12px;
-    border: 1px solid #0f0f0f;
-    box-shadow: 3px 2px 2px 0px rgba(15, 15, 15, 0.762);
-}
 
-/* Battery states */
-#battery.warning {
-    color: #679E9C;
-}
+ #clock {
+     /* background-color:#a3be8c; */
+     color: whitesmoke;
+     /*border-radius: 10px;*/
+     margin: 2px 10px;
+     background-color: rgba(0, 0, 0, 0);
+ }
 
-#battery.critical:not(.charging) {
-    background-color: #3B8893;
-    color: #ccdccf;
-}
+ #backlight {
+     color: whitesmoke;
+     /* border-bottom: 2px solid @yellow; */
+     border-radius: 10px 0px 0px 10px;
+ }
 
-#battery.charging {
-    color: #2c8694;
-}
+ #battery {
+     color: whitesmoke;
+     /* border-bottom: 2px solid #d8dee9; */
+     border-radius: 0px 10px 10px 0px;
+     margin-right: 10px;
+ }
 
-/* Tooltip styling */
-tooltip {
-    background: #ccdccf;
-    border: 1px solid #91B19D;
-    border-radius: 6px;
-}
+ #battery.charging {
+     color: whitesmoke;
+     /* border-bottom: 2px solid #81a1c1; */
+ }
 
-tooltip label {
-    color: #0F2237;
-}
+ @keyframes blink {
+     to {
+         color: @red;
+         /* border-bottom: 2px solid @red; */
+     }
+ }
+
+ #battery.critical:not(.charging) {
+     color: #bf616a;
+     /* border-bottom: 2px solid #bf616a; */
+     animation-name: blink;
+     animation-duration: 0.5s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+ }
+
+ 
+
+ #memory {
+     color: whitesmoke;
+ }
+
+ #network.disabled {
+     color: #bf616a;
+     /* border-bottom: 2px solid #bf616a; */
+ }
+
+ #network {
+     color: whitesmoke;
+     /* border-bottom: 2px solid @green; */
+     border-radius: 10px;
+     margin-right: 5px;
+ }
+
+ #network.disconnected {
+     color: #bf616a;
+     /* border-bottom: 2px solid #bf616a; */
+ }
+
+ #pulseaudio {
+     color: whitesmoke;
+     /* border-radius: 0 10px 10px 0; */
+     /* margin-right: 10px; */
+     /* border-bottom: 2px solid @flamingo; */
+ }
+
+ #pulseaudio.muted {
+     color: #3b4252;
+     /* border-bottom: 2px solid #3b4252; */
+ }
+
+
+
+
+ #tray {
+     /* background-color: @base; */
+     margin: 1px 0px;
+     border-radius: 13px 0px 0px 0px;
+     background-color: @color4;
+     
+ }
+
+
+ #custom-launcher {
+     font-size: 16px;
+     background-color: @color4;
+     /* background-image: url("/home/lightcrimson/.config/icons/svg/arch.svg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: contain;  */
+     color: white;
+     border-radius: 0px 13px 0px 0px;
+     padding: 0px 7px;
+ }
+
+ 
+ 
+
+ #cpu {
+     color: @foreground;
+     /* border-bottom: 2px solid @sky; */
+ }
+
+ #cpu #cpu-icon {
+     color: @foreground;
+ }
+ 
+ #temperature {
+     color: @foreground;
+     /* border-bottom: 2px solid @teal; */
+     border-radius: 10px 0px 0px 10px;
+ }
+
+ #temperature.critical {
+     color: red;
+     /* border-bottom: 2px solid @red; */
+ }
+ 
+ 
+ #mpd {
+     border-radius: 10px;
+     color: @color1;
+     margin-left: 5px;
+     background-color: rgba(0, 0, 0, 0);
+ }
+ 
+ #mpd.2 {
+     border-radius: 10px 0px 0px 10px;
+     margin: 8px 0px 8px 6px;
+     padding: 4px 12px 4px 10px;
+ }
+ 
+ #mpd.3 {
+     border-radius: 0px 0px 0px 0px;
+     margin: 8px 0px 8px 0px;
+     padding: 4px;
+ }
+ 
+ #mpd.4 {
+     border-radius: 0px 10px 10px 0px;
+     margin: 8px 0px 8px 0px;
+     padding: 4px 10px 4px 14px;
+ }
+ 
+ #mpd.2,
+ #mpd.3,
+ #mpd.4 {
+     /* background-color: @base; */
+     background-color: rgba(36, 39, 58, 0.6);
+     font-size: 14px;
+ }

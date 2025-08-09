@@ -1,0 +1,28 @@
+{
+    "checksum": "61a30ebff502b913dd44769081a87dfa",
+    "wallpaper": "/home/lacum/Imagens/kiki.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#101316",
+        "foreground": "#c3c4c4",
+        "cursor": "#c3c4c4"
+    },
+    "colors": {
+        "color0": "#101316",
+        "color1": "#187396",
+        "color2": "#5A698D",
+        "color3": "#058C98",
+        "color4": "#079BA3",
+        "color5": "#02B0AB",
+        "color6": "#46B3AE",
+        "color7": "#c3c4c4",
+        "color8": "#5a646f",
+        "color9": "#187396",
+        "color10": "#5A698D",
+        "color11": "#058C98",
+        "color12": "#079BA3",
+        "color13": "#02B0AB",
+        "color14": "#46B3AE",
+        "color15": "#c3c4c4"
+    }
+}

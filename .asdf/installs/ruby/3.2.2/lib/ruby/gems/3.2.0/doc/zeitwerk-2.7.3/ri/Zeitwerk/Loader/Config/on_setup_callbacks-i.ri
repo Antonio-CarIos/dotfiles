@@ -1,0 +1,3 @@
+U:RDoc::Attr[iI"on_setup_callbacks:ETI"0Zeitwerk::Loader::Config#on_setup_callbacks;TI"R;T:privateo:RDoc::Markup::Document:@parts[o:RDoc::Markup::Verbatim;	[I"AUser-oriented callbacks to be fired on setup and on reload.
+;T:@format0o:RDoc::Markup::Paragraph;	[I": Array[{ () -> void }];T:
+@fileI""lib/zeitwerk/loader/config.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Zeitwerk::Loader::Config;TcRDoc::NormalModule0

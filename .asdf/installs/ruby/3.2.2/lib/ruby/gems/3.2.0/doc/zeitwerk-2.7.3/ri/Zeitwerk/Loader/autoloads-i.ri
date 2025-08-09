@@ -1,0 +1,8 @@
+U:RDoc::Attr[iI"autoloads:ETI"Zeitwerk::Loader#autoloads;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Verbatim;	[I"GMaps absolute paths for which an autoload has been set ---and not
+;TI"?executed--- to their corresponding Zeitwerk::Cref object.
+;TI"
+;TI"n  "/Users/fxn/blog/app/models/user.rb"          => #<Zeitwerk::Cref:... @mod=Object, @cname=:User, ...>,
+;TI"p  "/Users/fxn/blog/app/models/hotel/pricing.rb" => #<Zeitwerk::Cref:... @mod=Hotel, @cname=:Pricing, ...>,
+;TI"  ...
+;T:@format0o:RDoc::Markup::Paragraph;	[I"#: Hash[String, Zeitwerk::Cref];T:
+@fileI"lib/zeitwerk/loader.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Zeitwerk::Loader;TcRDoc::NormalClass0

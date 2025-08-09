@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"file_watcher_addons:ETI"(RubyLsp::Addon::file_watcher_addons;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I": Array[Addon];T:
+@fileI"lib/ruby_lsp/addon.rb;T:0@omit_headings_from_table_of_contents_below0T@I"RubyLsp::Addon;TcRDoc::NormalClass0

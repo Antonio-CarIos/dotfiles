@@ -1,0 +1,28 @@
+{
+    "checksum": "c680e85554544ca8114525f95e131379",
+    "wallpaper": "/home/lacum/Imagens/gorillaz-night.png",
+    "alpha": "100",
+    "special": {
+        "background": "#131114",
+        "foreground": "#c4c3c4",
+        "cursor": "#c4c3c4"
+    },
+    "colors": {
+        "color0": "#131114",
+        "color1": "#439F5C",
+        "color2": "#013D86",
+        "color3": "#003CA0",
+        "color4": "#014692",
+        "color5": "#12619D",
+        "color6": "#4F749C",
+        "color7": "#c4c3c4",
+        "color8": "#645a6f",
+        "color9": "#439F5C",
+        "color10": "#013D86",
+        "color11": "#003CA0",
+        "color12": "#014692",
+        "color13": "#12619D",
+        "color14": "#4F749C",
+        "color15": "#c4c3c4"
+    }
+}

@@ -1,0 +1,111 @@
+
+/*
+ * Design customizado para o wlogout inspirado na imagem fornecida.
+ * Focado em layout, espaçamento e estados de foco/hover.
+ */
+
+/* ================== ESTILOS GLOBAIS ================== */
+
+* {
+    /* Remove a imagem de fundo de todos os elementos para que o background da 'window' seja o único a aparecer */
+    background-image: none;
+    font-size: 15px;
+}
+
+/* Importa as variáveis de cor geradas pelo Pywal */
+@import "theme.css";
+
+/* ================== CONTÊINER PRINCIPAL (A 'window' do wlogout) ================== */
+
+window {
+    /* Estiliza o contêiner principal para ser o retângulo longo e arredondado */
+    background-color: rgba(34, 25, 14, 0.4); /* Cor de fundo @background com 40% de opacidade */
+    border-radius: 15px; /* Bordas arredondadas para o contêiner inteiro */
+    padding: 10px; /* Espaçamento interno para os botões */
+    margin: 10px; /* Margem externa para não tocar a borda da tela */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    background-image: url('__WALLPAPER_PYWAL__'); /* Mantém o wallpaper, o background-color ficará por cima */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================== ESTILOS DOS BOTÕES (Estado Normal) ================== */
+
+button {
+    /* Estilos base para todos os botões no estado normal, todos com o mesmo tamanho */
+    color: @foreground;
+    background-color: @background; /* Fundo sólido para botões inativos */
+    outline-style: none;
+    border: none;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%; /* Ícones um pouco maiores */
+    border-radius: 0px; /* Bordas quadradas por padrão, exceto nas pontas */
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
+    
+    /* Tamanho padrão para todos os botões */
+    padding: 20px; 
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+/* ================== ESTILOS DOS BOTÕES (Estados de Foco e Hover) ================== */
+
+/* Estilos para o botão em foco (como o 'Lock' na imagem) */
+button:focus {
+    background-color: rgba(201, 182, 173, 0.6); /* Cor @color4 com 60% de opacidade para o foco */
+    background-size: 30%; /* Ícone maior ao focar */
+    padding: 25px 22px; /* Aumenta o padding vertical e horizontal para o botão ficar maior */
+    border-radius: 10px; /* Borda arredondada no foco */
+}
+
+/* Estilos para o botão em hover (como o 'Suspend' na imagem) */
+button:hover {
+    background-color: rgba(201, 182, 173, 0.8); /* Cor @color4 com 80% de opacidade */
+    background-size: 35%; /* Ícone ainda maior no hover */
+    padding: 50px 50px; /* Aumenta o padding vertical e horizontal para o botão ficar maior */
+    border-radius: 15px; /* Bordas completamente arredondadas no hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: height 1s;/* Adiciona uma sombra para criar um efeito de 'pop-up' */
+}
+
+/* ================== ESTILOS DOS BOTÕES INDIVIDUAIS ================== */
+
+#lock {
+    background-image: image(url("$HOME/.config/wlogout/icons/lock_black.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    border-radius: 10px 0px 0px 10px; /* Ponta esquerda arredondada */
+    margin: 0px;
+}
+
+#logout {
+    background-image: image(url("$HOME/.config/wlogout/icons/logout_black.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+    border-radius: 0px;
+    margin: 0px;
+}
+
+#suspend {
+    background-image: image(url("$HOME/.config/wlogout/icons/suspend_black.png"), url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+    border-radius: 0px;
+    margin: 0px;
+}
+
+#shutdown {
+    background-image: image(url("$HOME/.config/wlogout/icons/shutdown_black.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    border-radius: 0px;
+    margin: 0px;
+}
+
+#hibernate {
+    background-image: image(url("$HOME/.config/wlogout/icons/hibernate_black.png"), url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+    border-radius: 0px;
+    margin: 0px;
+}
+
+#reboot {
+    background-image: image(url("$HOME/.config/wlogout/icons/reboot_black.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    border-radius: 0px 10px 10px 0px; /* Ponta direita arredondada */
+    margin: 0px;
+}

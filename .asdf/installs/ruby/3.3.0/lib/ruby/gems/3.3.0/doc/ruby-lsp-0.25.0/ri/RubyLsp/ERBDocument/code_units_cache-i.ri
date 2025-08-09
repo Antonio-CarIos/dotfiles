@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"code_units_cache:ETI"*RubyLsp::ERBDocument#code_units_cache;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I";: (^(Integer arg0) -> Integer | Prism::CodeUnitsCache);T:
+@fileI"!lib/ruby_lsp/erb_document.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RubyLsp::ERBDocument;TcRDoc::NormalClass0

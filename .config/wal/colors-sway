@@ -1,0 +1,21 @@
+set $wallpaper /home/lacum/.config/wallpaper/basquiat-art9.jpg
+
+set $background #22190e
+set $foreground #c7c5c2
+
+set $color0 #22190e
+set $color1 #60708A
+set $color2 #55B5A9
+set $color3 #A4A69F
+set $color4 #C9B6AD
+set $color5 #D9CCB5
+set $color6 #DED7CA
+set $color7 #c7c5c2
+set $color8 #72695e
+set $color9 #60708A
+set $color10 #55B5A9
+set $color11 #A4A69F
+set $color12 #C9B6AD
+set $color13 #D9CCB5
+set $color14 #DED7CA
+set $color15 #c7c5c2

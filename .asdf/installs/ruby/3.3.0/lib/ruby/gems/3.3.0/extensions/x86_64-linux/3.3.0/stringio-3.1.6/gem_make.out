@@ -1,0 +1,18 @@
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/stringio-3.1.6/ext/stringio
+/home/lacum/.asdf/installs/ruby/3.3.0/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/stringio-3.1.6/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250707-20774-4iubjo sitelibdir\=./.gem.20250707-20774-4iubjo clean
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/stringio-3.1.6/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250707-20774-4iubjo sitelibdir\=./.gem.20250707-20774-4iubjo
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/stringio-3.1.6/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250707-20774-4iubjo sitelibdir\=./.gem.20250707-20774-4iubjo install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20250707-20774-4iubjo
+
+current directory: /home/lacum/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/stringio-3.1.6/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250707-20774-4iubjo sitelibdir\=./.gem.20250707-20774-4iubjo clean

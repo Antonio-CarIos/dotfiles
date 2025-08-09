@@ -1,0 +1,18 @@
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+/home/lacum/.asdf/installs/ruby/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250615-51286-kswiyb sitelibdir\=./.gem.20250615-51286-kswiyb clean
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250615-51286-kswiyb sitelibdir\=./.gem.20250615-51286-kswiyb
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250615-51286-kswiyb sitelibdir\=./.gem.20250615-51286-kswiyb install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20250615-51286-kswiyb
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250615-51286-kswiyb sitelibdir\=./.gem.20250615-51286-kswiyb clean

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# asdf-plugin: java adoptopenjdk-11.0.16+8
+exec asdf exec "jshell" "$@"

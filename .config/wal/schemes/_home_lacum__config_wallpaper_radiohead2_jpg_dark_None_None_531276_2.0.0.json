@@ -1,0 +1,28 @@
+{
+    "checksum": "4a577f03514f3adcac06c7ca576793e4",
+    "wallpaper": "/home/lacum/.config/wallpaper/radiohead2.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#110e20",
+        "foreground": "#c3c2c7",
+        "cursor": "#c3c2c7"
+    },
+    "colors": {
+        "color0": "#110e20",
+        "color1": "#22459A",
+        "color2": "#5770A1",
+        "color3": "#897A83",
+        "color4": "#6D8DBD",
+        "color5": "#999DA9",
+        "color6": "#CBBEB8",
+        "color7": "#c3c2c7",
+        "color8": "#615d72",
+        "color9": "#22459A",
+        "color10": "#5770A1",
+        "color11": "#897A83",
+        "color12": "#6D8DBD",
+        "color13": "#999DA9",
+        "color14": "#CBBEB8",
+        "color15": "#c3c2c7"
+    }
+}

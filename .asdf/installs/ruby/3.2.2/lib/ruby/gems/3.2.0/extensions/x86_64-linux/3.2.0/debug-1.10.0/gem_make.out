@@ -1,0 +1,19 @@
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/debug-1.10.0/ext/debug
+/home/lacum/.asdf/installs/ruby/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250615-52804-yzyd8d sitelibdir\=./.gem.20250615-52804-yzyd8d clean
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250615-52804-yzyd8d sitelibdir\=./.gem.20250615-52804-yzyd8d
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250615-52804-yzyd8d sitelibdir\=./.gem.20250615-52804-yzyd8d install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250615-52804-yzyd8d/debug
+
+current directory: /home/lacum/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250615-52804-yzyd8d sitelibdir\=./.gem.20250615-52804-yzyd8d clean

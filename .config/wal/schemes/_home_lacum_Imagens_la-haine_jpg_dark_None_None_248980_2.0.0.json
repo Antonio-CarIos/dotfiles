@@ -1,0 +1,28 @@
+{
+    "checksum": "874e8ca2b3d85a685434bd3393f3d01e",
+    "wallpaper": "/home/lacum/Imagens/la-haine.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0b1419",
+        "foreground": "#c2c4c5",
+        "cursor": "#c2c4c5"
+    },
+    "colors": {
+        "color0": "#0b1419",
+        "color1": "#7F8080",
+        "color2": "#90908F",
+        "color3": "#A1A09E",
+        "color4": "#B2B0AE",
+        "color5": "#C1C0BE",
+        "color6": "#D0CFCF",
+        "color7": "#c2c4c5",
+        "color8": "#5a676e",
+        "color9": "#7F8080",
+        "color10": "#90908F",
+        "color11": "#A1A09E",
+        "color12": "#B2B0AE",
+        "color13": "#C1C0BE",
+        "color14": "#D0CFCF",
+        "color15": "#c2c4c5"
+    }
+}

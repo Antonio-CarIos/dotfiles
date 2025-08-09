@@ -1,0 +1,395 @@
+have_func: checking for fdatasync() in unistd.h... -------------------- yes
+
+LD_LIBRARY_PATH=.:/home/lacum/.asdf/installs/ruby/3.3.0/lib "gcc -o conftest -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/x86_64-linux -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/backward -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef  -fPIC conftest.c  -L. -L/home/lacum/.asdf/installs/ruby/3.3.0/lib -Wl,-rpath,/home/lacum/.asdf/installs/ruby/3.3.0/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/lacum/.asdf/installs/ruby/3.3.0/lib -L/home/lacum/.asdf/installs/ruby/3.3.0/lib -lruby  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+LD_LIBRARY_PATH=.:/home/lacum/.asdf/installs/ruby/3.3.0/lib "gcc -o conftest -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/x86_64-linux -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/backward -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef  -fPIC conftest.c  -L. -L/home/lacum/.asdf/installs/ruby/3.3.0/lib -Wl,-rpath,/home/lacum/.asdf/installs/ruby/3.3.0/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/lacum/.asdf/installs/ruby/3.3.0/lib -L/home/lacum/.asdf/installs/ruby/3.3.0/lib -lruby  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <unistd.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))fdatasync; return !p; }
+/* end */
+
+--------------------
+
+append_cppflags: checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... -------------------- yes
+
+LD_LIBRARY_PATH=.:/home/lacum/.asdf/installs/ruby/3.3.0/lib "gcc -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/x86_64-linux -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/backward -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef  -fPIC  -D_GNU_SOURCE -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -O3 is accepted as CFLAGS... -------------------- yes
+
+LD_LIBRARY_PATH=.:/home/lacum/.asdf/installs/ruby/3.3.0/lib "gcc -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/x86_64-linux -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/backward -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0 -I.    -D_GNU_SOURCE -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef  -fPIC  -O3 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -std=c99 is accepted as CFLAGS... -------------------- no
+
+LD_LIBRARY_PATH=.:/home/lacum/.asdf/installs/ruby/3.3.0/lib "gcc -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/x86_64-linux -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/backward -I/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0 -I.    -D_GNU_SOURCE -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef  -fPIC -O3  -std=c99 -Werror -c conftest.c"
+In file included from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/arithmetic/long.h:42,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/arithmetic/int.h:26,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/arithmetic/char.h:23,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/arithmetic.h:24,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/ruby.h:28,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby.h:38,
+                 from conftest.c:1:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:137:15: error: unknown type name ‘bool’
+  137 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:31:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+   30 | #include "ruby/internal/attr/enum_extensibility.h"
+  +++ |+#include <stdbool.h>
+   31 | #include "ruby/internal/stdbool.h"
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:172:15: error: unknown type name ‘bool’
+  172 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:172:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:188:15: error: unknown type name ‘bool’
+  188 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:188:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:205:15: error: unknown type name ‘bool’
+  205 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:205:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:246:15: error: unknown type name ‘bool’
+  246 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:246:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:266:15: error: unknown type name ‘bool’
+  266 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:266:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:287:15: error: unknown type name ‘bool’
+  287 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:287:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:310:15: error: unknown type name ‘bool’
+  310 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:310:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:326:15: error: unknown type name ‘bool’
+  326 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/special_consts.h:326:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/arithmetic/long.h:215:15: error: unknown type name ‘bool’
+  215 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/arithmetic/long.h:43:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+   42 | #include "ruby/internal/special_consts.h"      /* FIXNUM_FLAG */
+  +++ |+#include <stdbool.h>
+   43 | #include "ruby/internal/value.h"
+In file included from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:38,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rstring.h:30,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/arithmetic/char.h:29:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:202:15: error: unknown type name ‘bool’
+  202 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:34:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+   33 | #include "ruby/internal/error.h"
+  +++ |+#include <stdbool.h>
+   34 | #include "ruby/internal/has/builtin.h"
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h: In function ‘rb_integer_type_p’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:206:16: error: ‘true’ undeclared (first use in this function)
+  206 |         return true;
+      |                ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:206:16: note: ‘true’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:206:16: note: each undeclared identifier is reported only once for each function it appears in
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:209:16: error: ‘false’ undeclared (first use in this function)
+  209 |         return false;
+      |                ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:209:16: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:262:15: error: unknown type name ‘bool’
+  262 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:262:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h: In function ‘RB_FLOAT_TYPE_P’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:266:16: error: ‘true’ undeclared (first use in this function)
+  266 |         return true;
+      |                ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:266:16: note: ‘true’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:269:16: error: ‘false’ undeclared (first use in this function)
+  269 |         return false;
+      |                ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:269:16: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:285:15: error: unknown type name ‘bool’
+  285 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:285:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h: In function ‘RB_DYNAMIC_SYM_P’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:289:16: error: ‘false’ undeclared (first use in this function)
+  289 |         return false;
+      |                ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:289:16: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:305:15: error: unknown type name ‘bool’
+  305 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:305:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:324:8: error: unknown type name ‘bool’
+  324 | static bool
+      |        ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:324:8: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h: In function ‘rbimpl_RB_TYPE_P_fastpath’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:349:16: error: ‘false’ undeclared (first use in this function)
+  349 |         return false;
+      |                ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:349:16: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:352:16: error: ‘true’ undeclared (first use in this function)
+  352 |         return true;
+      |                ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:352:16: note: ‘true’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:374:15: error: unknown type name ‘bool’
+  374 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:374:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:418:15: error: unknown type name ‘bool’
+  418 | static inline bool rbimpl_rtypeddata_p(VALUE obj);
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/value_type.h:418:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:443:8: error: unknown type name ‘bool’
+  443 | static bool
+      |        ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:41:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+   40 | #include "ruby/defines.h"
+  +++ |+#include <stdbool.h>
+   41 | 
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h: In function ‘RB_FL_ABLE’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:447:16: error: ‘false’ undeclared (first use in this function)
+  447 |         return false;
+      |                ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:447:16: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:453:16: error: ‘true’ undeclared (first use in this function)
+  453 |         return true;
+      |                ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:453:16: note: ‘true’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:517:15: error: unknown type name ‘bool’
+  517 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:517:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:533:15: error: unknown type name ‘bool’
+  533 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:533:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:551:15: error: unknown type name ‘bool’
+  551 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:551:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:567:15: error: unknown type name ‘bool’
+  567 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:567:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:755:15: error: unknown type name ‘bool’
+  755 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:755:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h: In function ‘RB_OBJ_TAINTABLE’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:759:12: error: ‘false’ undeclared (first use in this function)
+  759 |     return false;
+      |            ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:759:12: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h: In function ‘RB_OBJ_TAINTED_RAW’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:777:12: error: ‘false’ undeclared (first use in this function)
+  777 |     return false;
+      |            ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:777:12: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:791:15: error: unknown type name ‘bool’
+  791 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:791:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h: In function ‘RB_OBJ_TAINTED’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:795:12: error: ‘false’ undeclared (first use in this function)
+  795 |     return false;
+      |            ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:795:12: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:897:15: error: unknown type name ‘bool’
+  897 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:897:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h: In function ‘RB_OBJ_FROZEN’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:901:16: error: ‘true’ undeclared (first use in this function)
+  901 |         return true;
+      |                ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/fl_type.h:901:16: note: ‘true’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+In file included from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rarray.h:32,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core.h:23,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/ruby.h:29:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/gc.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/gc.h:721:15: error: unknown type name ‘bool’
+  721 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/gc.h:27:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+   26 | # include <stddef.h>                       /* size_t */
+  +++ |+#include <stdbool.h>
+   27 | #endif
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/gc.h:741:15: error: unknown type name ‘bool’
+  741 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/gc.h:741:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/gc.h: In function ‘RB_OBJ_PROMOTED’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/gc.h:745:16: error: ‘false’ undeclared (first use in this function)
+  745 |         return false;
+      |                ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/gc.h:745:16: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+In file included from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core.h:25:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rbignum.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rbignum.h:60:15: error: unknown type name ‘bool’
+   60 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rbignum.h:1:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+  +++ |+#include <stdbool.h>
+    1 | #ifndef RBIMPL_RBIGNUM_H                             /*-*-C++-*-vi:se ft=cpp:*/
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rbignum.h:73:15: error: unknown type name ‘bool’
+   73 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rbignum.h:73:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+In file included from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core.h:34:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rtypeddata.h:518:15: error: unknown type name ‘bool’
+  518 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rtypeddata.h:27:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+   26 | # include <stddef.h>
+  +++ |+#include <stdbool.h>
+   27 | #endif
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rtypeddata.h:561:15: error: unknown type name ‘bool’
+  561 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rtypeddata.h:561:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rtypeddata.h:578:15: error: unknown type name ‘bool’
+  578 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/core/rtypeddata.h:578:15: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+In file included from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/ruby.h:42:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/memory.h:414:5: error: unknown type name ‘bool’
+  414 |     bool left;                  /**< Whether overflow happened or not. */
+      |     ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/memory.h:27:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+   26 | # include <stddef.h>
+  +++ |+#include <stdbool.h>
+   27 | #endif
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/memory.h: In function ‘rbimpl_size_mul_overflow’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/memory.h:568:49: error: ‘false’ undeclared (first use in this function)
+  568 |     struct rbimpl_size_mul_overflow_tag ret = { false,  0, };
+      |                                                 ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/memory.h:568:49: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+In file included from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/ruby.h:46:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:252:15: error: unknown type name ‘bool’
+  252 | static inline bool
+      |               ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:39:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+   38 | #include "ruby/internal/intern/proc.h"  /* rb_block_proc */
+  +++ |+#include <stdbool.h>
+   39 | #include "ruby/internal/iterator.h"     /* rb_block_given_p / rb_keyword_given_p */
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h: In function ‘rb_scan_args_keyword_p’:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:259:16: error: ‘true’ undeclared (first use in this function)
+  259 |         return true;
+      |                ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:259:16: note: ‘true’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:263:16: error: ‘false’ undeclared (first use in this function)
+  263 |         return false;
+      |                ^~~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:263:16: note: ‘false’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h: At top level:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:268:8: error: unknown type name ‘bool’
+  268 | static bool
+      |        ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:268:8: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:282:8: error: unknown type name ‘bool’
+  282 | static bool
+      |        ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:282:8: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:303:8: error: unknown type name ‘bool’
+  303 | static bool
+      |        ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:303:8: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:334:8: error: unknown type name ‘bool’
+  334 | static bool
+      |        ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:334:8: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:349:8: error: unknown type name ‘bool’
+  349 | static bool
+      |        ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:349:8: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:390:18: error: unknown type name ‘bool’
+  390 |                  bool f_var, bool f_hash, bool f_block,
+      |                  ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:390:18: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:390:30: error: unknown type name ‘bool’
+  390 |                  bool f_var, bool f_hash, bool f_block,
+      |                              ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:390:30: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:390:43: error: unknown type name ‘bool’
+  390 |                  bool f_var, bool f_hash, bool f_block,
+      |                                           ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/scan_args.h:390:43: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+In file included from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/intern.h:41,
+                 from /home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/ruby.h:194:
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/intern/load.h:234:25: error: unknown type name ‘bool’
+  234 | void rb_ext_ractor_safe(bool flag);
+      |                         ^~~~
+/home/lacum/.asdf/installs/ruby/3.3.0/include/ruby-3.3.0/ruby/internal/intern/load.h:1:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; this is probably fixable by adding ‘#include <stdbool.h>’
+  +++ |+#include <stdbool.h>
+    1 | #ifndef  RBIMPL_INTERN_LOAD_H                        /*-*-C++-*-vi:se ft=cpp:*/
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+

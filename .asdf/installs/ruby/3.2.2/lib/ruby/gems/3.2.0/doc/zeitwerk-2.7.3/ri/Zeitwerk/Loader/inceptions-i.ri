@@ -1,0 +1,21 @@
+U:RDoc::Attr[iI"inceptions:ETI" Zeitwerk::Loader#inceptions;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Verbatim;	[I"OWhen the path passed to Module#autoload is in the stack of features being
+;TI"Nloaded at the moment, Ruby passes. For example, Module#autoload? returns
+;TI"<`nil` even if the autoload has not been attempted. See
+;TI"
+;TI"1    https://bugs.ruby-lang.org/issues/21035
+;TI"
+;TI"!We call these "inceptions".
+;TI"
+;TI"NA common case is the entry point of gems managed by Zeitwerk. Their main
+;TI"Pfile is normally required and, while doing so, the loader sets an autoload
+;TI">on the gem namespace. That autoload hits this edge case.
+;TI"
+;TI"HThere is some logic that neeeds to know if an autoload for a given
+;TI"Oconstant already exists. We check Module#autoload? first, and fallback to
+;TI""the inceptions just in case.
+;TI"
+;TI"NThis map keeps track of pairs (cref, autoload_path) found by the loader.
+;TI"LThe object Zeitwerk::Registry.inceptions, on the other hand, acts as a
+;TI"global registry for them.
+;T:@format0o:RDoc::Markup::Paragraph;	[I"": Zeitwerk::Cref::Map[String];T:
+@fileI"lib/zeitwerk/loader.rb;T:0@omit_headings_from_table_of_contents_below0F@$I"Zeitwerk::Loader;TcRDoc::NormalClass0

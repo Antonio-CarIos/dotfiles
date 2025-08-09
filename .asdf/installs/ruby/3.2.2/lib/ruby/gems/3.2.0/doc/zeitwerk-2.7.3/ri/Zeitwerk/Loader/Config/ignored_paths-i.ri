@@ -1,0 +1,5 @@
+U:RDoc::Attr[iI"ignored_paths:ETI"+Zeitwerk::Loader::Config#ignored_paths;TI"R;T:privateo:RDoc::Markup::Document:@parts[o:RDoc::Markup::Verbatim;	[I"PThe actual collection of absolute file and directory names at the time the
+;TI"Oignored glob patterns were expanded. Computed on setup, and recomputed on
+;TI"reload.
+;T:@format0o:RDoc::Markup::Paragraph;	[I": Set[String];T:
+@fileI""lib/zeitwerk/loader/config.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Zeitwerk::Loader::Config;TcRDoc::NormalModule0

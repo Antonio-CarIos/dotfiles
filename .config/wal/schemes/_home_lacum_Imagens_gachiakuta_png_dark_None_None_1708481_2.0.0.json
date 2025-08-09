@@ -1,0 +1,28 @@
+{
+    "checksum": "9f2b2fe232454d64f0c8095969d1ab88",
+    "wallpaper": "/home/lacum/Imagens/gachiakuta.png",
+    "alpha": "100",
+    "special": {
+        "background": "#190e0a",
+        "foreground": "#c5c2c1",
+        "cursor": "#c5c2c1"
+    },
+    "colors": {
+        "color0": "#190e0a",
+        "color1": "#996E54",
+        "color2": "#BA9657",
+        "color3": "#D4A267",
+        "color4": "#7A8284",
+        "color5": "#C9AF91",
+        "color6": "#E9D3A5",
+        "color7": "#c5c2c1",
+        "color8": "#6e6059",
+        "color9": "#996E54",
+        "color10": "#BA9657",
+        "color11": "#D4A267",
+        "color12": "#7A8284",
+        "color13": "#C9AF91",
+        "color14": "#E9D3A5",
+        "color15": "#c5c2c1"
+    }
+}

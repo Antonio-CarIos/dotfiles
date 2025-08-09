@@ -1,0 +1,14 @@
+U:RDoc::Attr[iI"
+roots:ETI"#Zeitwerk::Loader::Config#roots;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Verbatim;	[I"YAbsolute paths of the root directories, mapped to their respective root namespaces:
+;TI"
+;TI"1  "/Users/fxn/blog/app/channels" => Object,
+;TI"C  "/Users/fxn/blog/app/adapters" => ActiveJob::QueueAdapters,
+;TI"  ...
+;TI"
+;TI"NStored in a hash to preserve order, easily handle duplicates, and have a
+;TI"fast lookup by directory.
+;TI"
+;TI"GThis is a private collection maintained by the loader. The public
+;TI"0interface for it is `push_dir` and `dirs`.
+;T:@format0o:RDoc::Markup::Paragraph;	[I": Hash[String, Module];T:
+@fileI""lib/zeitwerk/loader/config.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Zeitwerk::Loader::Config;TcRDoc::NormalModule0

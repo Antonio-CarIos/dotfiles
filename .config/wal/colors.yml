@@ -1,0 +1,24 @@
+wallpaper: "/home/lacum/.config/wallpaper/basquiat-art9.jpg"
+
+special:
+    background: "#22190e"
+    foreground: "#c7c5c2"
+    cursor: "#c7c5c2"
+
+colors:
+    color0: "#22190e"
+    color1: "#60708A"
+    color2: "#55B5A9"
+    color3: "#A4A69F"
+    color4: "#C9B6AD"
+    color5: "#D9CCB5"
+    color6: "#DED7CA"
+    color7: "#c7c5c2"
+    color8: "#72695e"
+    color9: "#60708A"
+    color10: "#55B5A9"
+    color11: "#A4A69F"
+    color12: "#C9B6AD"
+    color13: "#D9CCB5"
+    color14: "#DED7CA"
+    color15: "#c7c5c2"

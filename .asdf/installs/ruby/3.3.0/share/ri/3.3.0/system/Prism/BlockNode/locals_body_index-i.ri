@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"locals_body_index:ETI"'Prism::BlockNode#locals_body_index;TI"R;T:privateo:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"+attr_reader locals_body_index: Integer;T:
+@fileI"lib/prism/node.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Prism::BlockNode;TcRDoc::NormalClass0
