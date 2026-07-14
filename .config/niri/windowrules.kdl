@@ -1,0 +1,37 @@
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+
+// Example: enable rounded corners for all windows.
+window-rule {
+  geometry-corner-radius 12
+  clip-to-geometry true
+}
+
+window-rule {
+    match app-id=r#"^floating-kitty$"#
+    open-floating true
+    opacity 0.97
+    default-column-width { fixed 1000; }
+    default-window-height { fixed 700; }
+}
+
+window-rule {
+    match app-id=r#"^kitty$"#
+    opacity 0.95
+}
+
+window-rule {
+    match app-id=r#"^kitty$"# is-focused=false
+    opacity 0.85
+}
+
+
+
+
